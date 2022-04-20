@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+}
+
+.contenedor .izquierda{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+
+.perfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.perfil .imagen{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.perfil .imagen img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor .derecha{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.perfil h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.perfil h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contacto{
+    padding-top: 40px;
+}
+
+.titulo{
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contacto ul{
+    position: relative;
+}
+
+.contacto ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contacto ul li .icono{
+color: #03a9f4;
+display: inline-block;
+width: 30px;
+font-size: 18px;
+}
+
+.contacto ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contacto.educacion li{
+    margin-bottom: 15px;
+}
+
+.contacto.educacion h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.contacto.educacion h4:nth-child(2){
+    color: #fff;
+    font-weight: 600;
+}
+
+.contacto.educacion h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contacto.lenguajes .porcentaje{
+background-color: black;
+position: relative;
+width: 100%;
+height: 6px;
+display: block;
+}
+
+.contacto.lenguajes .porcentaje div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.acerca{
+    margin-bottom: 50px;
+}
+
+.acerca:last-child{
+    margin-bottom: 0px;    
+}
+
+.titulo2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+
+p{
+    color: #333;
+}
+
+.acerca .caja{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.acerca .caja .anioempresa{
+    min-width: 180px;
+}
+
+.acerca .caja .anioempresa h5{
+    color: #848c90;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.acerca .caja .textospan h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+.habilidades .caja{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.habilidades .caja h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+
+.habilidades .caja .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.habilidades .caja .porcentaje div{
+    top: 0;
+    position:absolute;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.intereses ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.intereses ul li{
+list-style: none;
+color: #333;
+font-weight: 500;
+margin: 10px 0;
+}
+
+.intereses ul li .fa{
+color: #03a9f4;
+font-size: 18px;
+width: 20px;
+}
+
+
+@media(max-width: 1000px){
+    .contenedor{
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+    }
+
+    .intereses ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .acerca .caja{
+
+        flex-direction: column;
+    }
+
+    .acerca .caja .anioempresa{
+        min-width: 150px;
+        margin-bottom: 5px;        
+    }
+
+    .intereses ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .habilidades .caja{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.modal {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -150px;
+    margin-top: -250px;
+    border: none;
+    border-radius: 25px;
+    
+
+ }
+
+ .modal::backdrop{
+     background: black;
+     opacity: .5;
+ }
+
+ .modal h2{
+     text-align: center;
+     margin-top: 10px;
+ }
+
+ .modal input{
+     width: 90%;
+     height: 30px;
+     margin: 10px;
+     padding: 3px;
+     
+ }
+
+ .modal textarea{
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+    overflow-y: hidden;
+    resize: none;
+    padding: 5px;
+    
+}
+
+.modal button{
+    width: 90%;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    border-radius: 35px;
+    text-transform: uppercase;
+    
+}
+
+.modal button:hover{
+   background: #003147;
+   color: #fafafa;
+}
+
+.btn-conectate{
+    width: 50%;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    border-radius: 35px;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.btn-conectate:hover{
+    background: #003147;
+    color: #fafafa;
+}
+
+.switchaso{
+    margin-top: 15%;
+    position: relative;
+}
+
+.switchaso label{
+    margin-left: 20px;
+}
+input[type="checkbox"]{
+    margin-top: 10%;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    -webkit-appearance: none;
+    background: #F1BF00;
+    border-radius: 15px;
+    transition: .5s;
+}   
+
+input:checked[type="checkbox"]{
+background: #B31942;
+}
+input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #AA151B;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]:before{
+    left: 30px;
+    
+    background: #FFFFFF;
+}
